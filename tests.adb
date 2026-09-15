@@ -18,9 +18,9 @@ procedure Tests is
 
 begin
    Put_Line ("TEST 1 — Sign Domain Basic Properties");
-   Check ("1.1 Bottom is empty set", Bottom_Sign = (False, False, False));
-   Check ("1.2 Top represents any sign", Top_Sign = (True, True, True));
-   Check ("1.3 Pos represents strictly positive", Pos_Sign = (False, False, True));
+   Check ("1.1 Bottom is empty set", Bottom_Sign = [False, False, False]);
+   Check ("1.2 Top represents any sign", Top_Sign = [True, True, True]);
+   Check ("1.3 Pos represents strictly positive", Pos_Sign = [False, False, True]);
 
    Put_Line ("TEST 2 — Sign Domain Join (Least Upper Bound)");
    Check ("2.1 Pos U Zero = Non_Neg", Sign_Join (Pos_Sign, Zero_Sign) = Non_Neg_Sign);

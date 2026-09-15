@@ -13,14 +13,14 @@ package Abstract_Interpretation is
    
    subtype Sign_Domain is Sign_Set;
 
-   Bottom_Sign   : constant Sign_Domain := (False, False, False);
-   Neg_Sign      : constant Sign_Domain := (True,  False, False);
-   Zero_Sign     : constant Sign_Domain := (False, True,  False);
-   Pos_Sign      : constant Sign_Domain := (False, False, True);
-   Non_Pos_Sign  : constant Sign_Domain := (True,  True,  False);
-   Non_Neg_Sign  : constant Sign_Domain := (False, True,  True);
-   Non_Zero_Sign : constant Sign_Domain := (True,  False, True);
-   Top_Sign      : constant Sign_Domain := (True,  True,  True);
+   Bottom_Sign   : constant Sign_Domain := [False, False, False];
+   Neg_Sign      : constant Sign_Domain := [True,  False, False];
+   Zero_Sign     : constant Sign_Domain := [False, True,  False];
+   Pos_Sign      : constant Sign_Domain := [False, False, True];
+   Non_Pos_Sign  : constant Sign_Domain := [True,  True,  False];
+   Non_Neg_Sign  : constant Sign_Domain := [False, True,  True];
+   Non_Zero_Sign : constant Sign_Domain := [True,  False, True];
+   Top_Sign      : constant Sign_Domain := [True,  True,  True];
 
    function Sign_Join (A, B : Sign_Domain) return Sign_Domain
      with Global => null;

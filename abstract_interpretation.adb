@@ -6,12 +6,12 @@ package body Abstract_Interpretation is
 
    function Sign_Join (A, B : Sign_Domain) return Sign_Domain is
    begin
-      return (A (1) or B (1), A (2) or B (2), A (3) or B (3));
+      return [A (1) or B (1), A (2) or B (2), A (3) or B (3)];
    end Sign_Join;
 
    function Sign_Meet (A, B : Sign_Domain) return Sign_Domain is
    begin
-      return (A (1) and B (1), A (2) and B (2), A (3) and B (3));
+      return [A (1) and B (1), A (2) and B (2), A (3) and B (3)];
    end Sign_Meet;
 
    function Sign_Add (A, B : Sign_Domain) return Sign_Domain is
